@@ -2,8 +2,8 @@ package checker
 
 import (
 	"context"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/config"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/vars"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/config"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/vars"
 )
 
 func CheckLoginByRateNum(ctx context.Context) error {

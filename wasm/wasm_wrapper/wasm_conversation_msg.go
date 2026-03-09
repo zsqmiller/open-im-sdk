@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM SDK. All rights reserved.
+// Copyright (c) 2023 OpenIM SDK. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,9 +20,9 @@ package wasm_wrapper
 import (
 	"syscall/js"
 
-	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/openim-sdk-core/v3/wasm/event_listener"
+	"github.com/zsqmiller/open-im-sdk/v3/open_im_sdk"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/wasm/event_listener"
 )
 
 // ------------------------------------message---------------------------

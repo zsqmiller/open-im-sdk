@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM SDK. All rights reserved.
+// Copyright (c) 2023 OpenIM SDK. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,8 +18,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
 	"github.com/openimsdk/tools/errs"
 	"github.com/openimsdk/tools/utils/datautil"
 
@@ -46,8 +46,10 @@ func (g *Group) doNotification(ctx context.Context, msg *sdkws.MsgData) error {
 			return err
 		}
 		if g.filter.ShouldExecute(detail.Uuid) {
-			g.listener().OnGroupApplicationAccepted(utils.StructToJsonString(
-				ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())))
+			localRequest := ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())
+			if localRequest != nil {
+				g.listener().OnGroupApplicationAccepted(utils.StructToJsonString(localRequest))
+			}
 		}
 
 	case constant.GroupApplicationRejectedNotification: // 1506
@@ -56,8 +58,10 @@ func (g *Group) doNotification(ctx context.Context, msg *sdkws.MsgData) error {
 			return err
 		}
 		if g.filter.ShouldExecute(detail.Uuid) {
-			g.listener().OnGroupApplicationRejected(utils.StructToJsonString(
-				ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())))
+			localRequest := ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())
+			if localRequest != nil {
+				g.listener().OnGroupApplicationRejected(utils.StructToJsonString(localRequest))
+			}
 		}
 	case constant.JoinGroupApplicationNotification: // 1503
 		var detail sdkws.JoinGroupApplicationTips
@@ -65,8 +69,10 @@ func (g *Group) doNotification(ctx context.Context, msg *sdkws.MsgData) error {
 			return err
 		}
 		if g.filter.ShouldExecute(detail.Uuid) {
-			g.listener().OnGroupMemberAdded(utils.StructToJsonString(
-				ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())))
+			localRequest := ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())
+			if localRequest != nil {
+				g.listener().OnGroupMemberAdded(utils.StructToJsonString(localRequest))
+			}
 		}
 	default:
 		g.groupSyncMutex.Lock()

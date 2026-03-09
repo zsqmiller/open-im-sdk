@@ -3,8 +3,8 @@ package conversation_msg
 import (
 	"context"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/cliconf"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/api"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/cliconf"
 	pbConversation "github.com/openimsdk/protocol/conversation"
 	"github.com/openimsdk/protocol/jssdk"
 	pbMsg "github.com/openimsdk/protocol/msg"

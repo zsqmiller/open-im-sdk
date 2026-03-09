@@ -9,11 +9,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/api"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/network"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/network"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/sdkerrs"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
 	authPB "github.com/openimsdk/protocol/auth"
 	"github.com/openimsdk/protocol/msg"
 	"github.com/openimsdk/tools/errs"

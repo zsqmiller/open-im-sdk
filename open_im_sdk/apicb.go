@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync/atomic"
 
-	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk_callback"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/common"
+	"github.com/zsqmiller/open-im-sdk/v3/open_im_sdk_callback"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/common"
 	"github.com/openimsdk/tools/errs"
 	"github.com/openimsdk/tools/log"
 )

@@ -2,7 +2,7 @@ package progress
 
 import (
 	"context"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/reerrgroup"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/pkg/reerrgroup"
 	"github.com/openimsdk/tools/utils/stringutil"
 )
 

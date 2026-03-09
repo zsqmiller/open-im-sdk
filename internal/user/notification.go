@@ -3,7 +3,7 @@ package user
 import (
 	"context"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
 	"github.com/openimsdk/protocol/constant"
 	"github.com/openimsdk/protocol/sdkws"
 	"github.com/openimsdk/tools/errs"

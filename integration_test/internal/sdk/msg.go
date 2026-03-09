@@ -2,8 +2,8 @@ package sdk
 
 import (
 	"context"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/vars"
-	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/vars"
+	"github.com/zsqmiller/open-im-sdk/v3/sdk_struct"
 )
 
 func (s *TestSDK) SendSingleMsg(ctx context.Context, msg *sdk_struct.MsgStruct, receiveID string) (*sdk_struct.MsgStruct, error) {

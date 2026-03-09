@@ -10,8 +10,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/sdk_struct"
 	"github.com/openimsdk/protocol/constant"
 	"github.com/openimsdk/tools/log"
 )

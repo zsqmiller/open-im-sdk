@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM SDK. All rights reserved.
+// Copyright (c) 2023 OpenIM SDK. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/network"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/page"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/network"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/page"
 	"github.com/openimsdk/tools/errs"
 	"github.com/openimsdk/tools/utils/datautil"
 

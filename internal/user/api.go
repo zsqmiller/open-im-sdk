@@ -3,12 +3,12 @@ package user
 import (
 	"context"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/cliconf"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/common"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/cliconf"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/common"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/model_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/sdk_struct"
 	"github.com/openimsdk/protocol/sdkws"
 	userPb "github.com/openimsdk/protocol/user"
 	"github.com/openimsdk/tools/log"

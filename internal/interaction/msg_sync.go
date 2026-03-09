@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM SDK. All rights reserved.
+// Copyright (c) 2023 OpenIM SDK. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,11 +23,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/common"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/db_interface"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/common"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/db_interface"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/model_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/sdk_struct"
 	"github.com/openimsdk/protocol/msg"
 	"github.com/openimsdk/protocol/sdkws"
 	"github.com/openimsdk/tools/errs"

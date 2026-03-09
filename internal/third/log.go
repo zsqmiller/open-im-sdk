@@ -11,12 +11,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/openimsdk/openim-sdk-core/v3/internal/third/file"
+	"github.com/zsqmiller/open-im-sdk/v3/internal/third/file"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/api"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
-	"github.com/openimsdk/openim-sdk-core/v3/version"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/ccontext"
+	"github.com/zsqmiller/open-im-sdk/v3/version"
 	"github.com/openimsdk/protocol/constant"
 	"github.com/openimsdk/protocol/third"
 	"github.com/openimsdk/tools/errs"

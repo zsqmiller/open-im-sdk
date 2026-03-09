@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
-	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/ccontext"
+	"github.com/zsqmiller/open-im-sdk/v3/sdk_struct"
 )
 
 func TestUpload(t *testing.T) {

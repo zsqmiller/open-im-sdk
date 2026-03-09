@@ -1,4 +1,4 @@
-module github.com/zsqmiller/open-im-sdk
+module github.com/zsqmiller/open-im-sdk/v3
 
 go 1.23.0
 

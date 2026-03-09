@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/syncer"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/model_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/syncer"
 	constantpb "github.com/openimsdk/protocol/constant"
 	"github.com/openimsdk/protocol/group"
 	"github.com/openimsdk/protocol/sdkws"

@@ -13,9 +13,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/openimsdk/openim-sdk-core/v3/version"
+	"github.com/zsqmiller/open-im-sdk/v3/version"
 
-	"github.com/openimsdk/openim-sdk-core/v3/msgtest/module"
+	"github.com/zsqmiller/open-im-sdk/v3/msgtest/module"
 	"github.com/openimsdk/tools/log"
 )
 

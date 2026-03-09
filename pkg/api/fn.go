@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/network"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/network"
 	"github.com/openimsdk/protocol/sdkws"
 )
 

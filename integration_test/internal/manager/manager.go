@@ -3,12 +3,12 @@ package manager
 import (
 	"context"
 
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/config"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/network"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/config"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/api"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/ccontext"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/network"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/sdk_struct"
 	authPB "github.com/openimsdk/protocol/auth"
 	"github.com/openimsdk/tools/mcontext"
 )

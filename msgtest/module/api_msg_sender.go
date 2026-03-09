@@ -3,9 +3,9 @@ package module
 import (
 	"fmt"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/api"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/sdk_struct"
 	"github.com/openimsdk/protocol/constant"
 	"github.com/openimsdk/protocol/msg"
 	"github.com/openimsdk/protocol/sdkws"

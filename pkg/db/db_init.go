@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM SDK. All rights reserved.
+// Copyright (c) 2023 OpenIM SDK. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,9 +24,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/openim-sdk-core/v3/version"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/model_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/version"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"

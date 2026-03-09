@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/sdkerrs"
 	"github.com/openimsdk/tools/utils/datautil"
 )
 

@@ -2,10 +2,10 @@ package checker
 
 import (
 	"context"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/config"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/utils"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/sdk"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/vars"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/config"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/sdk"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/vars"
 )
 
 // CheckMessageNum check message num.

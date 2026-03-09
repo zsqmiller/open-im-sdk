@@ -6,9 +6,9 @@ package indexdb
 import (
 	"context"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/openim-sdk-core/v3/wasm/exec"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/model_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/wasm/exec"
 	"github.com/openimsdk/tools/errs"
 )
 

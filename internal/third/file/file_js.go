@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM open source community. All rights reserved.
+// Copyright 婵?2023 OpenIM open source community. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ package file
 import (
 	"bufio"
 	"errors"
-	"github.com/openimsdk/openim-sdk-core/v3/wasm/exec"
+	"github.com/zsqmiller/open-im-sdk/v3/wasm/exec"
 	"io"
 	"syscall/js"
 )

@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM SDK. All rights reserved.
+// Copyright (c) 2023 OpenIM SDK. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 package group
 
 import (
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/model_struct"
 
 	"github.com/openimsdk/protocol/sdkws"
 )
@@ -59,6 +59,9 @@ func ServerGroupMemberToLocalGroupMember(info *sdkws.GroupMemberFullInfo) *model
 }
 
 func ServerGroupRequestToLocalGroupRequest(info *sdkws.GroupRequest) *model_struct.LocalGroupRequest {
+	if info == nil || info.GroupInfo == nil || info.UserInfo == nil {
+		return nil
+	}
 	return &model_struct.LocalGroupRequest{
 		GroupID:       info.GroupInfo.GroupID,
 		GroupName:     info.GroupInfo.GroupName,
@@ -87,6 +90,9 @@ func ServerGroupRequestToLocalGroupRequest(info *sdkws.GroupRequest) *model_stru
 }
 
 func ServerGroupRequestToLocalGroupRequestForNotification(groupInfo *sdkws.GroupInfo, groupRequest *sdkws.GroupRequest) *model_struct.LocalGroupRequest {
+	if groupRequest == nil {
+		return nil
+	}
 	if groupInfo != nil {
 		groupRequest.GroupInfo = groupInfo
 	}

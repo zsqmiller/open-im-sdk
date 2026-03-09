@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
 	"github.com/openimsdk/protocol/sdkws"
 	"github.com/openimsdk/tools/log"
 )

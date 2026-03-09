@@ -1,7 +1,7 @@
 package progress
 
 import (
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/config"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/config"
 	"time"
 )
 

@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM SDK. All rights reserved.
+// Copyright (c) 2023 OpenIM SDK. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@ import (
 	"context"
 	"time"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
 	"github.com/openimsdk/tools/errs"
 
 	"github.com/openimsdk/tools/utils/datautil"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/datafetcher"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/datafetcher"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdk_params_callback"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/model_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/sdk_params_callback"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/sdkerrs"
 
 	"github.com/openimsdk/protocol/group"
 	"github.com/openimsdk/protocol/sdkws"

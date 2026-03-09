@@ -2,12 +2,12 @@ package manager
 
 import (
 	"context"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/config"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/decorator"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/progress"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/pkg/reerrgroup"
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/vars"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/config"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/pkg/decorator"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/pkg/progress"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/pkg/reerrgroup"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/vars"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/api"
 	"github.com/openimsdk/protocol/relation"
 	"github.com/openimsdk/tools/log"
 )

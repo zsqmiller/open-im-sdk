@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk"
+	"github.com/zsqmiller/open-im-sdk/v3/open_im_sdk"
 )
 
 type SProgress struct{}

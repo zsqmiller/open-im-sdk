@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM SDK. All rights reserved.
+// Copyright (c) 2023 OpenIM SDK. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,13 +20,13 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk_callback"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/cliconf"
+	"github.com/zsqmiller/open-im-sdk/v3/open_im_sdk_callback"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/ccontext"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/cliconf"
 	pbConstant "github.com/openimsdk/protocol/constant"
 
-	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
-	"github.com/openimsdk/openim-sdk-core/v3/version"
+	"github.com/zsqmiller/open-im-sdk/v3/sdk_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/version"
 
 	"github.com/openimsdk/tools/log"
 	"github.com/openimsdk/tools/mcontext"

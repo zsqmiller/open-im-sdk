@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM SDK. All rights reserved.
+// Copyright (c) 2023 OpenIM SDK. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,25 +24,25 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/openimsdk/openim-sdk-core/v3/internal/third/file"
+	"github.com/zsqmiller/open-im-sdk/v3/internal/third/file"
 	"github.com/openimsdk/tools/errs"
 
-	"github.com/openimsdk/openim-sdk-core/v3/internal/relation"
+	"github.com/zsqmiller/open-im-sdk/v3/internal/relation"
 
-	conv "github.com/openimsdk/openim-sdk-core/v3/internal/conversation_msg"
-	"github.com/openimsdk/openim-sdk-core/v3/internal/group"
-	"github.com/openimsdk/openim-sdk-core/v3/internal/interaction"
-	"github.com/openimsdk/openim-sdk-core/v3/internal/third"
-	"github.com/openimsdk/openim-sdk-core/v3/internal/user"
-	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk_callback"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/ccontext"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/common"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/db_interface"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/model_struct"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
-	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
+	conv "github.com/zsqmiller/open-im-sdk/v3/internal/conversation_msg"
+	"github.com/zsqmiller/open-im-sdk/v3/internal/group"
+	"github.com/zsqmiller/open-im-sdk/v3/internal/interaction"
+	"github.com/zsqmiller/open-im-sdk/v3/internal/third"
+	"github.com/zsqmiller/open-im-sdk/v3/internal/user"
+	"github.com/zsqmiller/open-im-sdk/v3/open_im_sdk_callback"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/ccontext"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/common"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/db_interface"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/model_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/sdkerrs"
+	"github.com/zsqmiller/open-im-sdk/v3/sdk_struct"
 	"github.com/openimsdk/protocol/push"
 	"github.com/openimsdk/protocol/sdkws"
 	"github.com/openimsdk/tools/log"

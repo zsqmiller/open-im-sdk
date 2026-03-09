@@ -2,7 +2,7 @@
 # define the default goal
 #
 
-ROOT_PACKAGE=github.com/openimsdk/Open-IM-SDK-Core
+ROOT_PACKAGE=github.com/zsqmiller/open-im-sdk/v3
 
 ###################################=> common commands <=#############################################
 # ========================== Capture Environment ===============================
@@ -126,7 +126,7 @@ ifeq ($(origin GOBIN), undefined)
 	GOBIN := $(GOPATH)/bin
 endif
 
-EXCLUDE_TESTS=github.com/openimsdk/openim-sdk-core/test
+EXCLUDE_TESTS=github.com/zsqmiller/open-im-sdk/v3/test
 
 # ==============================================================================
 # Build

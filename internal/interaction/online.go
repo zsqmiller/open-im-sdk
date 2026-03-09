@@ -2,7 +2,7 @@ package interaction
 
 import (
 	"context"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
 	userPb "github.com/openimsdk/protocol/user"
 )
 

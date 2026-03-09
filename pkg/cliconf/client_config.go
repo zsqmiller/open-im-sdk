@@ -6,8 +6,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/api"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/api"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/sdkerrs"
 	"github.com/openimsdk/protocol/user"
 	"github.com/openimsdk/tools/log"
 )

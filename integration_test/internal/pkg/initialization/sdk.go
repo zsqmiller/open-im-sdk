@@ -1,7 +1,7 @@
 package initialization
 
 import (
-	"github.com/openimsdk/openim-sdk-core/v3/integration_test/internal/manager"
+	"github.com/zsqmiller/open-im-sdk/v3/integration_test/internal/manager"
 )
 
 func GenUserIDs() {

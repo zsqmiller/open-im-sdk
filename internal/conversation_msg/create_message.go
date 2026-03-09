@@ -4,16 +4,16 @@ import (
 	"context"
 	"errors"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/constant"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
 	"github.com/openimsdk/tools/log"
 
 	"os"
 	"path/filepath"
 	"strings"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/sdkerrs"
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/utils"
-	"github.com/openimsdk/openim-sdk-core/v3/sdk_struct"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/sdkerrs"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
+	"github.com/zsqmiller/open-im-sdk/v3/sdk_struct"
 )
 
 func (c *Conversation) CreateTextMessage(ctx context.Context, text string) (*sdk_struct.MsgStruct, error) {

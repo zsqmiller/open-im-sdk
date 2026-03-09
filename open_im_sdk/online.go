@@ -1,7 +1,7 @@
 package open_im_sdk
 
 import (
-	"github.com/openimsdk/openim-sdk-core/v3/open_im_sdk_callback"
+	"github.com/zsqmiller/open-im-sdk/v3/open_im_sdk_callback"
 )
 
 // SubscribeUsersStatus Presence status of subscribed users.

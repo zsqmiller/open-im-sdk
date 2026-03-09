@@ -4,7 +4,7 @@ import (
 	"context"
 	"sort"
 
-	"github.com/openimsdk/openim-sdk-core/v3/pkg/db/db_interface"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/db/db_interface"
 	"github.com/openimsdk/tools/errs"
 	"github.com/openimsdk/tools/utils/datautil"
 )
