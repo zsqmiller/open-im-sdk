@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/zsqmiller/open-im-sdk/v3/pkg/ccontext"
 	"github.com/openimsdk/protocol/msg"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/ccontext"
 
 	"github.com/openimsdk/tools/errs"
 
@@ -280,6 +280,8 @@ func (c *Conversation) SendMessage(ctx context.Context, s *sdk_struct.MsgStruct,
 		}
 		return ""
 	}
+	fmt.Println("ok778899")
+
 	options := make(map[string]bool, 2)
 	lc, err := c.checkID(ctx, s, recvID, groupID, options)
 	if err != nil {
