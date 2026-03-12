@@ -18,10 +18,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
-	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
 	"github.com/openimsdk/tools/errs"
 	"github.com/openimsdk/tools/utils/datautil"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/constant"
+	"github.com/zsqmiller/open-im-sdk/v3/pkg/utils"
 
 	"github.com/openimsdk/protocol/sdkws"
 	"github.com/openimsdk/tools/log"
@@ -31,6 +31,21 @@ const (
 	groupSortIDUnchanged = 0
 	groupSortIDChanged   = 1
 )
+
+func notificationDedupKey(msg *sdkws.MsgData, uuid string) string {
+	if uuid != "" {
+		return uuid
+	}
+	if msg != nil {
+		if msg.ServerMsgID != "" {
+			return "server:" + msg.ServerMsgID
+		}
+		if msg.ClientMsgID != "" {
+			return "client:" + msg.ClientMsgID
+		}
+	}
+	return ""
+}
 
 func (g *Group) DoNotification(ctx context.Context, msg *sdkws.MsgData) {
 	if err := g.doNotification(ctx, msg); err != nil {
@@ -45,7 +60,7 @@ func (g *Group) doNotification(ctx context.Context, msg *sdkws.MsgData) error {
 		if err := utils.UnmarshalNotificationElem(msg.Content, &detail); err != nil {
 			return err
 		}
-		if g.filter.ShouldExecute(detail.Uuid) {
+		if g.filter.ShouldExecute(notificationDedupKey(msg, detail.Uuid)) {
 			localRequest := ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())
 			if localRequest != nil {
 				g.listener().OnGroupApplicationAccepted(utils.StructToJsonString(localRequest))
@@ -57,7 +72,7 @@ func (g *Group) doNotification(ctx context.Context, msg *sdkws.MsgData) error {
 		if err := utils.UnmarshalNotificationElem(msg.Content, &detail); err != nil {
 			return err
 		}
-		if g.filter.ShouldExecute(detail.Uuid) {
+		if g.filter.ShouldExecute(notificationDedupKey(msg, detail.Uuid)) {
 			localRequest := ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())
 			if localRequest != nil {
 				g.listener().OnGroupApplicationRejected(utils.StructToJsonString(localRequest))
@@ -68,7 +83,7 @@ func (g *Group) doNotification(ctx context.Context, msg *sdkws.MsgData) error {
 		if err := utils.UnmarshalNotificationElem(msg.Content, &detail); err != nil {
 			return err
 		}
-		if g.filter.ShouldExecute(detail.Uuid) {
+		if g.filter.ShouldExecute(notificationDedupKey(msg, detail.Uuid)) {
 			localRequest := ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())
 			if localRequest != nil {
 				g.listener().OnGroupMemberAdded(utils.StructToJsonString(localRequest))
