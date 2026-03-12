@@ -17,6 +17,7 @@ package conversation_msg
 import (
 	"context"
 	"errors"
+	"fmt"
 	"sort"
 	"sync"
 	"time"
@@ -77,7 +78,10 @@ func (c *Conversation) getAdvancedHistoryMessageList(ctx context.Context, req sd
 		c.messagePullReverseEndSeqMap.Delete(conversationID, req.ViewType)
 	}
 
-	if req.GroupID != "" {
+	fmt.Println("origin startTime:", startTime)
+	fmt.Println("ok321", req.GroupID, req.StartTime)
+
+	if req.GroupID != "" && req.StartTime > 0 {
 		startTime = req.StartTime
 	}
 
