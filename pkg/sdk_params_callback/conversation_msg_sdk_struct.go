@@ -31,6 +31,8 @@ type FindMessageListCallback struct {
 type GetAdvancedHistoryMessageListParams struct {
 	ConversationID   string `json:"conversationID"`
 	StartClientMsgID string `json:"startClientMsgID"`
+	GroupID          string `json:"groupID"`
+	StartTime        int64  `json:"startTime"`
 	Count            int    `json:"count"`
 	ViewType         int    `json:"viewType"`
 }

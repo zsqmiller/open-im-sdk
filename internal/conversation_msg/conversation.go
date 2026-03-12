@@ -77,6 +77,10 @@ func (c *Conversation) getAdvancedHistoryMessageList(ctx context.Context, req sd
 		c.messagePullReverseEndSeqMap.Delete(conversationID, req.ViewType)
 	}
 
+	if req.GroupID != "" {
+		startTime = req.StartTime
+	}
+
 	log.ZDebug(ctx, "Assembly conversation parameters", "cost time", time.Since(t), "conversationID",
 		conversationID, "startTime:", startTime, "count:", req.Count)
 	list, err := c.fetchMessagesWithGapCheck(ctx, conversationID, req.Count, startTime, startSeq, startClientMsgID, isReverse, req.ViewType, &messageListCallback)
