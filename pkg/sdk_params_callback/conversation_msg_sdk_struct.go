@@ -34,6 +34,7 @@ type GetAdvancedHistoryMessageListParams struct {
 	GroupID          string `json:"groupID"`
 	StartTime        int64  `json:"startTime"`
 	Count            int    `json:"count"`
+	NewView          int    `json:"newView"`
 	ViewType         int    `json:"viewType"`
 }
 

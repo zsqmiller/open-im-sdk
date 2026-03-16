@@ -17,7 +17,6 @@ package conversation_msg
 import (
 	"context"
 	"errors"
-	"fmt"
 	"sort"
 	"sync"
 	"time"
@@ -60,6 +59,19 @@ func (c *Conversation) getAdvancedHistoryMessageList(ctx context.Context, req sd
 	var err error
 	var messageList sdk_struct.NewMsgList
 	conversationID = req.ConversationID
+	// 检查是否是第一次进入群聊
+	log.ZDebug(ctx, "new view", req.NewView)
+
+	if req.GroupID != "" && req.NewView == 0 {
+		localConversation, err := c.db.GetConversation(ctx, conversationID)
+		if err == nil && localConversation.LatestMsgSendTime == 0 {
+			// 第一次进入群聊，不加载历史消息
+			messageListCallback.MessageList = []*sdk_struct.MsgStruct{}
+			messageListCallback.IsEnd = true
+			return &messageListCallback, nil
+		}
+	}
+
 	if len(req.StartClientMsgID) > 0 {
 		m, err := c.db.GetMessage(ctx, conversationID, req.StartClientMsgID)
 		if err != nil {
@@ -78,12 +90,12 @@ func (c *Conversation) getAdvancedHistoryMessageList(ctx context.Context, req sd
 		c.messagePullReverseEndSeqMap.Delete(conversationID, req.ViewType)
 	}
 
-	fmt.Println("origin startTime:", startTime)
-	fmt.Println("ok321", req.GroupID, req.StartTime)
-
-	if req.GroupID != "" && req.StartTime > 0 {
-		startTime = req.StartTime
-	}
+	log.ZDebug(ctx, "origin startTime", "startTime", startTime)
+	log.ZDebug(ctx, "ok321", "GroupID", req.GroupID, "StartTime", req.StartTime)
+	//
+	//if req.GroupID != "" && req.StartTime > 0 {
+	//	startTime = req.StartTime
+	//}
 
 	log.ZDebug(ctx, "Assembly conversation parameters", "cost time", time.Since(t), "conversationID",
 		conversationID, "startTime:", startTime, "count:", req.Count)

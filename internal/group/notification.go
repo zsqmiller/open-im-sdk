@@ -60,7 +60,7 @@ func (g *Group) doNotification(ctx context.Context, msg *sdkws.MsgData) error {
 		if err := utils.UnmarshalNotificationElem(msg.Content, &detail); err != nil {
 			return err
 		}
-		if g.filter.ShouldExecute(notificationDedupKey(msg, detail.Uuid)) {
+		if g.filter.ShouldExecute(detail.Uuid) {
 			localRequest := ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())
 			if localRequest != nil {
 				g.listener().OnGroupApplicationAccepted(utils.StructToJsonString(localRequest))
@@ -72,7 +72,7 @@ func (g *Group) doNotification(ctx context.Context, msg *sdkws.MsgData) error {
 		if err := utils.UnmarshalNotificationElem(msg.Content, &detail); err != nil {
 			return err
 		}
-		if g.filter.ShouldExecute(notificationDedupKey(msg, detail.Uuid)) {
+		if g.filter.ShouldExecute(detail.Uuid) {
 			localRequest := ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())
 			if localRequest != nil {
 				g.listener().OnGroupApplicationRejected(utils.StructToJsonString(localRequest))
@@ -83,7 +83,7 @@ func (g *Group) doNotification(ctx context.Context, msg *sdkws.MsgData) error {
 		if err := utils.UnmarshalNotificationElem(msg.Content, &detail); err != nil {
 			return err
 		}
-		if g.filter.ShouldExecute(notificationDedupKey(msg, detail.Uuid)) {
+		if g.filter.ShouldExecute(detail.Uuid) {
 			localRequest := ServerGroupRequestToLocalGroupRequestForNotification(detail.GetGroup(), detail.GetRequest())
 			if localRequest != nil {
 				g.listener().OnGroupMemberAdded(utils.StructToJsonString(localRequest))
