@@ -63,6 +63,9 @@ func (c *Conversation) getAdvancedHistoryMessageList(ctx context.Context, req sd
 	// 检查是否是第一次进入群聊
 
 	fmt.Println("new view 8888888")
+
+	fmt.Println("new view 909090808080")
+	log.ZDebug(ctx, "new view 909090808080bbbcc", req.NewView)
 	log.ZDebug(ctx, "new view 8888888", req.NewView)
 
 	if req.GroupID != "" && req.NewView == 0 {

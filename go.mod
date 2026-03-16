@@ -1,6 +1,6 @@
 module github.com/zsqmiller/open-im-sdk/v3
 
-go 1.25.0
+go 1.24.0
 
 require (
 	github.com/coder/websocket v1.8.13
@@ -33,7 +33,6 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.24.0 // indirect
-	golang.org/x/mobile v0.0.0-20260217195705-b56b3793a9c4 // indirect
 	golang.org/x/sys v0.41.0 // indirect
 	golang.org/x/text v0.34.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240903143218-8af14fe29dc1 // indirect
