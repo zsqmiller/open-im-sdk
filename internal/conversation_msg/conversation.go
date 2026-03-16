@@ -17,6 +17,7 @@ package conversation_msg
 import (
 	"context"
 	"errors"
+	"fmt"
 	"sort"
 	"sync"
 	"time"
@@ -60,7 +61,9 @@ func (c *Conversation) getAdvancedHistoryMessageList(ctx context.Context, req sd
 	var messageList sdk_struct.NewMsgList
 	conversationID = req.ConversationID
 	// 检查是否是第一次进入群聊
-	log.ZDebug(ctx, "new view", req.NewView)
+
+	fmt.Println("new view 8888888")
+	log.ZDebug(ctx, "new view 8888888", req.NewView)
 
 	if req.GroupID != "" && req.NewView == 0 {
 		localConversation, err := c.db.GetConversation(ctx, conversationID)
