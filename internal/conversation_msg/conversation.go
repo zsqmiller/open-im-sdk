@@ -52,6 +52,15 @@ func (c *Conversation) setConversation(ctx context.Context, apiReq *pbConversati
 }
 
 func (c *Conversation) getAdvancedHistoryMessageList(ctx context.Context, req sdk.GetAdvancedHistoryMessageListParams, isReverse bool) (*sdk.GetAdvancedHistoryMessageListCallback, error) {
+	// 最早的调试代码 - 确认函数是否被调用
+	fmt.Println("[DEBUG] ========== getAdvancedHistoryMessageList START ==========")
+	fmt.Println("[DEBUG] conversationID:", req.ConversationID)
+	fmt.Println("[DEBUG] groupID:", req.GroupID)
+	fmt.Println("[DEBUG] newView:", req.NewView)
+	fmt.Println("[DEBUG] count:", req.Count)
+	fmt.Println("[DEBUG] isReverse:", isReverse)
+	log.ZError(ctx, "[CRITICAL] getAdvancedHistoryMessageList CALLED", nil, "conversationID", req.ConversationID, "newView", req.NewView, "groupID", req.GroupID)
+
 	t := time.Now()
 	var messageListCallback sdk.GetAdvancedHistoryMessageListCallback
 	var conversationID string
@@ -62,23 +71,10 @@ func (c *Conversation) getAdvancedHistoryMessageList(ctx context.Context, req sd
 	conversationID = req.ConversationID
 	// 检查是否是第一次进入群聊
 
-	fmt.Println("new view 8888888")
-	fmt.Println("new view 666666667")
-	fmt.Println("new view 909090808080")
-
+	fmt.Println("[DEBUG] 执行到第一个条件判断之前 - newView:", req.NewView)
 	log.ZError(ctx, "CHECK_8888888", nil, "new view 909090808080ok321", "data", req.NewView)
 	log.ZDebug(ctx, "new view 909090808080bbbcc", req.NewView)
 	log.ZDebug(ctx, "new view 8888888", req.NewView)
-
-	if req.GroupID != "" && req.NewView == 0 {
-		localConversation, err := c.db.GetConversation(ctx, conversationID)
-		if err == nil && localConversation.LatestMsgSendTime == 0 {
-			// 第一次进入群聊，不加载历史消息
-			messageListCallback.MessageList = []*sdk_struct.MsgStruct{}
-			messageListCallback.IsEnd = true
-			return &messageListCallback, nil
-		}
-	}
 
 	if len(req.StartClientMsgID) > 0 {
 		m, err := c.db.GetMessage(ctx, conversationID, req.StartClientMsgID)
@@ -107,6 +103,18 @@ func (c *Conversation) getAdvancedHistoryMessageList(ctx context.Context, req sd
 
 	log.ZDebug(ctx, "Assembly conversation parameters", "cost time", time.Since(t), "conversationID",
 		conversationID, "startTime:", startTime, "count:", req.Count)
+
+	// 【新增】第一次进入群聊检查：如果是新视图且是群聊且首次进入，则返回空消息列表
+	if req.GroupID != "" && req.NewView == 0 {
+		localConversation, err := c.db.GetConversation(ctx, conversationID)
+		if err == nil && localConversation.LatestMsgSendTime == 0 {
+			log.ZDebug(ctx, "First time entering group, no history messages", "conversationID", conversationID, "groupID", req.GroupID)
+			messageListCallback.MessageList = []*sdk_struct.MsgStruct{}
+			messageListCallback.IsEnd = true
+			return &messageListCallback, nil
+		}
+	}
+
 	list, err := c.fetchMessagesWithGapCheck(ctx, conversationID, req.Count, startTime, startSeq, startClientMsgID, isReverse, req.ViewType, &messageListCallback)
 	if err != nil {
 		return nil, err
