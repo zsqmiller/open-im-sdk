@@ -65,6 +65,8 @@ func (c *Conversation) getAdvancedHistoryMessageList(ctx context.Context, req sd
 	fmt.Println("new view 8888888")
 	fmt.Println("new view 666666667")
 	fmt.Println("new view 909090808080")
+
+	log.ZError(ctx, "CHECK_8888888", nil, "new view 909090808080ok321", "data", req.NewView)
 	log.ZDebug(ctx, "new view 909090808080bbbcc", req.NewView)
 	log.ZDebug(ctx, "new view 8888888", req.NewView)
 
